@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainUserActivity">
+
+    <!-- Toolbar-->
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/shape_rect01"
+        tools:ignore="MissingConstraints">
+
+
+        <ImageButton
+            android:id="@+id/logoutIb"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_power_white"
+            android:layout_alignParentEnd="true"
+            android:background="@null"/>
+        <ImageButton
+            android:id="@+id/editProfileBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_edit_white"
+            android:layout_toStartOf="@+id/logoutIb"
+            android:background="@null"/>
+        <ImageButton
+            android:id="@+id/settingsBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@null"
+            android:layout_toStartOf="@+id/editProfileBtn"
+            android:src="@drawable/ic_settings_white"/>
+        <ImageButton
+            android:id="@+id/offerBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@null"
+            android:layout_toStartOf="@+id/settingsBtn"
+            android:src="@drawable/ic_baseline_local_offer_24"/>
+
+
+
+
+
+        <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/profileIv"
+            app:c_border="true"
+            app:c_border_width="1dp"
+            app:c_border_color="@color/colorWhite"
+            android:src="@drawable/ic_person_gray"/>
+
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:paddingStart="5dp"
+            android:textStyle="bold"
+            android:layout_toEndOf="@+id/profileIv"
+            android:textColor="@color/colorWhite"/>
+
+        <TextView
+            android:id="@+id/phoneTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone Number"
+            android:paddingStart="5dp"
+            android:layout_toEndOf="@+id/profileIv"
+            android:textColor="@color/colorWhite"
+            android:layout_below="@+id/emailTv"/>
+
+        <TextView
+            android:id="@+id/emailTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:paddingStart="5dp"
+            android:layout_toEndOf="@+id/profileIv"
+            android:textColor="@color/colorWhite"
+            android:layout_below="@+id/nameTv"/>
+
+        <!--Tabs: Product, orders-->
+        <LinearLayout
+            android:layout_below="@+id/profileIv"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/shape_rect03"
+            android:orientation="horizontal">
+            <!--Product-->
+            <TextView
+                android:id="@+id/tabShopTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Shops"
+                android:background="@drawable/shape_rect04"
+                android:padding="10dp"
+                android:textColor="@color/colorBlack"/>
+            <!--Orders-->
+            <TextView
+                android:id="@+id/tabOrdersTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Orders"
+                android:padding="10dp"
+                android:textColor="@color/colorWhite"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/shopRl"
+        android:layout_below="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/shopRv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/shopRl"
+
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/row_shop"
+            tools:ignore="NotSibling" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+
+        android:id="@+id/orderRl"
+        android:layout_below="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/orderRv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:stackFromEnd="true"
+            app:reverseLayout="true"
+            android:layout_below="@+id/shopRl"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/row_order_user"
+            tools:ignore="NotSibling" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

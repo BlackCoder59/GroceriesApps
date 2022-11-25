@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FC2E20</color>
+    <color name="colorPrimaryDark">#FC2E20</color>
+    <color name="colorAccent">#FC2E20</color>
+    <color name="colorGray01">#C9C9C9</color>
+    <color name="colorGray02">#959595</color>
+    <color name="colorBlack">#FF000000</color>
+    <color name="colorWhite">#FFFFFFFF</color>
+    <color name="color_green">#43A047</color>
+    <color name="color_red">#FB2A2A</color>
+    <color name="color_gray002">#f5f0f0</color>
+    <color name="color_main_blue">#0A527E</color>
+</resources>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "183811317792",
+    "firebase_url": "https://grosrey-a749d-default-rtdb.firebaseio.com",
+    "project_id": "grosrey-a749d",
+    "storage_bucket": "grosrey-a749d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:183811317792:android:a41a49835688f673519c45",
+        "android_client_info": {
+          "package_name": "com.example.groceriesapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "183811317792-sdfvjdn86lrnba4qple2sqcfjkrqgkfp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwqePmsFsWVpzWjC1fFYoeMRpEXAALDy0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "183811317792-sdfvjdn86lrnba4qple2sqcfjkrqgkfp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
